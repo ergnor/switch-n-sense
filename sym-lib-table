@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name switch-n2-rescue)(type Legacy)(uri ${KIPRJMOD}/switch-n2-rescue.lib)(options "")(descr ""))
+)
