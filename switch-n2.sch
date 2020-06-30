@@ -364,7 +364,7 @@ L Device:C_Small C3
 U 1 1 1CEE7A9B
 P 11000 2500
 F 0 "C3" V 11300 2550 59  0000 L BNN
-F 1 "4.7u" V 11200 2450 59  0000 L BNN
+F 1 "2.2u" V 11200 2450 59  0000 L BNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 11000 2500 50  0001 C CNN
 F 3 "" H 11000 2500 50  0001 C CNN
 F 4 "WALSIN" H 11000 2500 59  0001 L BNN "MF"
@@ -596,10 +596,10 @@ L Device:R_Small R11
 U 1 1 615C770C
 P 5100 6700
 F 0 "R11" V 5200 6600 59  0000 L BNN
-F 1 "3m" V 5050 6650 59  0000 L BNN
+F 1 "2m" V 5050 6650 59  0000 L BNN
 F 2 "Resistor_SMD:R_2512_6332Metric" H 5100 6700 50  0001 C CNN
-F 3 "" H 5100 6700 50  0001 C CNN
-F 4 "unknown" H 5100 6700 59  0001 L BNN "OC_FARNELL"
+F 3 "www.farnell.com/datasheets/2059712.pdf" H 5100 6700 50  0001 C CNN
+F 4 "2434011" H 5100 6700 59  0001 L BNN "OC_FARNELL"
 	1    5100 6700
 	0    -1   -1   0   
 $EndComp
@@ -608,10 +608,10 @@ L Device:R_Small R12
 U 1 1 D3F54624
 P 5100 7100
 F 0 "R12" V 5250 7000 59  0000 L BNN
-F 1 "3m" V 5050 7050 59  0000 L BNN
+F 1 "2m" V 5050 7050 59  0000 L BNN
 F 2 "Resistor_SMD:R_2512_6332Metric" H 5100 7100 50  0001 C CNN
 F 3 "" H 5100 7100 50  0001 C CNN
-F 4 "unknown" H 5100 7100 59  0001 L BNN "OC_FARNELL"
+F 4 "2434011 " H 5100 7100 59  0001 L BNN "OC_FARNELL"
 	1    5100 7100
 	0    -1   -1   0   
 $EndComp
@@ -620,10 +620,10 @@ L Device:R_Small R13
 U 1 1 039B3C48
 P 5100 7500
 F 0 "R13" V 5250 7400 59  0000 L BNN
-F 1 "3m" V 5050 7450 59  0000 L BNN
+F 1 "2m" V 5050 7450 59  0000 L BNN
 F 2 "Resistor_SMD:R_2512_6332Metric" H 5100 7500 50  0001 C CNN
 F 3 "" H 5100 7500 50  0001 C CNN
-F 4 "unknown" H 5100 7500 59  0001 L BNN "OC_FARNELL"
+F 4 "2434011 " H 5100 7500 59  0001 L BNN "OC_FARNELL"
 	1    5100 7500
 	0    -1   -1   0   
 $EndComp
@@ -632,10 +632,10 @@ L Device:R_Small R14
 U 1 1 F8D47208
 P 5100 7900
 F 0 "R14" V 5200 7800 59  0000 L BNN
-F 1 "3m" V 5050 7850 59  0000 L BNN
+F 1 "2m" V 5050 7850 59  0000 L BNN
 F 2 "Resistor_SMD:R_2512_6332Metric" H 5100 7900 50  0001 C CNN
 F 3 "" H 5100 7900 50  0001 C CNN
-F 4 "unknown" H 5100 7900 59  0001 L BNN "OC_FARNELL"
+F 4 "2434011 " H 5100 7900 59  0001 L BNN "OC_FARNELL"
 	1    5100 7900
 	0    -1   -1   0   
 $EndComp
@@ -770,14 +770,12 @@ Text Notes 11300 1000 0    127  ~ 0
 High side MOSFET driver
 Text Notes 12320 9350 0    100  ~ 0
 Design: Martin Jäger (http://libre.solar)\nLicense: CC-BY-SA
-Text Notes 11600 2200 0    59   ~ 0
-Max. C_iss of FDMT80080DC = 20.7 nF\n\nNecessary CP capacity acc. datasheet:\n4 x 20.7 nF x 470/20 = 1.95 uF
 Text Notes 5900 2800 0    50   ~ 0
 4x NVMFS6H800NT1G
 Text Notes 4000 8600 0    59   ~ 0
-Take resistor with low temperature coefficient and \n3W thermal rating, e.g.:\nBourns CRE2512-FZ-R001E-3 (75 ppm/K, 3W, 1%)
-Text Notes 4600 6500 0    50   ~ 0
-Low side sense resistors
+Take resistor with low temperature coefficient and \n3W thermal rating, e.g.:\nBourns CRE2512-FZ-R002E-3 (75 ppm/K, 3W, 1%)
+Text Notes 4300 6450 0    50   ~ 0
+Low side sense resistors\n
 Text Notes 11750 5950 0    50   ~ 0
 BMS connector
 Text Notes 11330 6620 0    47   ~ 0
@@ -917,7 +915,7 @@ Wire Wire Line
 	5200 6700 5900 6700
 Wire Wire Line
 	4300 6700 5000 6700
-Text Label 5450 6700 0    50   ~ 0
+Text Label 6050 7300 0    50   ~ 0
 LOAD-
 Wire Wire Line
 	4300 7100 5000 7100
@@ -1020,4 +1018,6 @@ F 3 "https://www.fairchildsemi.com/datasheets/FD/FDMT80080DC.pdf" H 4450 2425 50
 	1    4450 2100
 	0    1    1    0   
 $EndComp
+Text Notes 4000 8200 0    50   ~ 0
+Current design for 30A  - two 2mOhm resistor in parallel
 $EndSCHEMATC
