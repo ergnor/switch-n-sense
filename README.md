@@ -5,8 +5,8 @@ This is a Kicad redesign of switch-n-sense pcb from LibreSolar project
 
 * Wire to board connector is replaced with cheaper alternative - Keystone 8197 (30A rating)
 * MOSFET's footprint now is TDSON-8-1 for 5x6 mm SMD transistors 
-* The connector to the BMS (IDC connector) is pin compatible with previous version of pcb
-* C1,C2,C6 and C7 changed to 0805(2012) size
+* Pinout of connector to the BMS (IDC connector) is compatible with previous version of pcb
+* C1,C2,C6 and C7 are changed to 0805(2012) size
 
 ## Current target
 
