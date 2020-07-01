@@ -1798,7 +1798,7 @@
     (fp_text reference C3 (at -2.7 0.1 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 2.2u (at 0 1.65 90) (layer F.Fab)
+    (fp_text value 4.7u (at 0 1.65 90) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -1 0.6) (end -1 -0.6) (layer F.Fab) (width 0.1))

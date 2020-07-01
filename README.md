@@ -1,27 +1,19 @@
 # Switch-N-Sense
-High-side NMOS power switch and current sense resistor for battery applications
+This is a Kicad redesign of switch-n-sense pcb from LibreSolar project
 
-This device is the power part of the new generation Libre Solar 24V-48V BMS, but can also be used for lead-acid battery protection switches.
+## Design changes:
 
-The connector to the BMS (IDC connector) is placed at the same height as in the BMS PCB. So mount this PCB right next to the BMS PCB (right side).
-
-## Design considerations
-
-The MOSFETs and the sense resistors are mounted at the back side of the PCB and should be attached to a large heat sink via thermal interface materials (e.g. thermal pad).
-
-[Würth Power Elements WP-BUCF (order code 7461059)](https://powerelement.we-online.de/p/s/1406/93172-PowerOne-Bush-vertical-through-hole.html) are used for wire to board connection.
+* Wire to board connector is replaced with cheaper alternative - Keystone 8197 (30A rating)
+* MOSFET's footprint now is TDSON-8-1 for 5x6 mm SMD transistors 
+* Pinout of connector to the BMS (IDC connector) is compatible with previous version of pcb
+* C1,C2,C6 and C7 are changed to 0805(2012) size
 
 ## Current target
 
-Current rating can be adjusted depending on chosen MOSFETs and sense resistors.
+Current rating can be adjusted depending on chosen MOSFETs and sense resistors, but major limiting factor is connector (30A)
 
-- Maximum number of MOSFETs: 2 in parallel
-- Maximum number of sense resitors (2512): 4
+| MOSFET (2x)   | Voltage | Maximum Current | Remark                                       |
+|---------------|---------|-----------------|----------------------------------------------|
+|NVMFS6H800NT1G | 48V     | 30 A            | connector limited                            |
 
-Targets for fully populated PCB (total heat dissipation approx. 20 W in MOSFETs, connectors and sense resistor at full current):
 
-| MOSFET (2x) | Voltage | Maximum Current | Remark                                       |
-|-------------|---------|-----------------|----------------------------------------------|
-| FDMT80080DC | 48V     | 80 A            |                                              |
-| FDMT80060DC | 12V/24V | 100 A           |                                              |
-| CSD18540Q5B | 12V/24V | 60 A            | cheap alternative, but needs other footprint |
