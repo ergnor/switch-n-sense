@@ -62,8 +62,6 @@ Wire Wire Line
 Wire Wire Line
 	11400 3200 10800 3200
 Connection ~ 10800 3200
-Text Label 11400 3000 0    10   ~ 0
-GND
 Wire Wire Line
 	12800 2600 13400 2600
 Wire Wire Line
@@ -364,7 +362,7 @@ L Device:C_Small C3
 U 1 1 1CEE7A9B
 P 11000 2500
 F 0 "C3" V 11300 2550 59  0000 L BNN
-F 1 "2.2u" V 11200 2450 59  0000 L BNN
+F 1 "4.7u" V 11200 2450 59  0000 L BNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 11000 2500 50  0001 C CNN
 F 3 "" H 11000 2500 50  0001 C CNN
 F 4 "WALSIN" H 11000 2500 59  0001 L BNN "MF"
@@ -768,8 +766,8 @@ Text Notes 4300 900  0    127  ~ 0
 Chg/Dsg FETs
 Text Notes 11300 1000 0    127  ~ 0
 High side MOSFET driver
-Text Notes 12320 9350 0    100  ~ 0
-Design: Martin Jäger (http://libre.solar)\nLicense: CC-BY-SA
+Text Notes 12350 9950 0    80   ~ 0
+Design: Martin Jäger (http://libre.solar)\nDesign: Yasen P.\nLicense: CC-BY-SA
 Text Notes 5900 2800 0    50   ~ 0
 4x NVMFS6H800NT1G
 Text Notes 4000 8600 0    59   ~ 0
@@ -788,9 +786,7 @@ Text Notes 8600 5000 0    59   ~ 0
 100V
 Text Notes 5200 5500 0    59   ~ 0
 100V
-Text Notes 4700 5500 0    59   ~ 0
-100V
-Text Notes 11100 2300 0    59   ~ 0
+Text Notes 11100 2350 0    59   ~ 0
 25V
 Wire Wire Line
 	3600 1900 3600 2200
@@ -1020,4 +1016,6 @@ F 3 "https://www.fairchildsemi.com/datasheets/FD/FDMT80080DC.pdf" H 4450 2425 50
 $EndComp
 Text Notes 4000 8200 0    50   ~ 0
 Current design for 30A  - two 2mOhm resistor in parallel
+Text Notes 4700 5500 0    59   ~ 0
+100V
 $EndSCHEMATC
